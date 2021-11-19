@@ -1,0 +1,11 @@
+{
+    "users": 
+        {
+            "name": "juan",
+            "icon": [
+                {"name": "cat"},
+                {"name": "dog"},
+                {"name": "horse"}
+            ]
+        }
+}

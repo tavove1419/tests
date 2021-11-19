@@ -1,0 +1,29 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <form [formGroup]="userForm">
+            <div class="fadeIn first">
+                <img src="../../../assets/img/logo.jpg" id="icon" alt="User Icon" />
+            </div>
+            <div class="p-col-12 p-md-12 p-lg-12 p-sm-12">
+                <input type="text" formControlName="name" placeholder="Ingresar usuario" required>
+            </div>
+            <div class="row">
+                <div class="p-md-4" *ngFor="let ico of listImg">
+                    <button class="btn btn-success" (click)="selectIcon(ico.name)"><fa-icon [icon]="ico.name"></fa-icon></button>
+                </div>
+            </div>
+            <div id="formFooter">
+                <section class="example-section">
+                    <mat-progress-bar
+                        class="example-margin"
+                        [value]="value">
+                    </mat-progress-bar>
+                </section>
+                <p>{{value ? value : 0}}%</p>
+                <div class="p-col-12 p-md-12 p-lg-12 p-sm-12">
+                    <input type="button"  (click)="getLogin()" [disabled]="!userForm.valid" class="fadeIn fourth" value="Iniciar Sesion">    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
